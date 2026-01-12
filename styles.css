@@ -130,12 +130,7 @@ body {
 .nav-links a:hover {
     opacity: 0.7;
 }
-.nav-links a.active {
-    background-color: var(--brand-primary);
-    color: var(--color-white);
-    padding: 8px 12px;
-    border-radius: 7px;
-}
+
 .hamburger {
     display: none;
     flex-direction: column;
@@ -171,7 +166,7 @@ body {
 .content-wrapper {
     max-width: 1400px;
     margin: 0 auto;
-    padding: 120px 60px 60px 60px;
+    padding: 150px 60px 60px 60px;
     height: 100%;
     display: flex;
     flex-direction: row;
@@ -262,17 +257,17 @@ body {
 }
 
 .btn-outline:hover {
-    opacity: 0.7;
+    background: var(--color-white);
+    color: var(--color-dark);
 }
 
 .btn-solid {
-    background: var(--brand-primary);
-    color: var(--color-white);
+    background: var(--color-white);
+    color: var(--color-dark);
 }
 
 .btn-solid:hover {
-    /* background: var(--color-button-hover); */
-    background: #7a3db4;
+    background: var(--color-button-hover);
 }
 
 .plus-icon {
@@ -306,22 +301,11 @@ body {
     transform: rotate(-45deg) scale(1.2);
 }
 
-.discount-arrow{
-    border: 1px solid var(--brand-primary);
-    padding: 5px;
-    border-radius: 50%;
-    transition: all 0.3s ease;
-}
-.discount-arrow:hover {
-    background-color: var(--brand-primary);
-    svg {
-        stroke: var(--color-white);
-    }
-}
 .discount-title {
     font-size: 11px;
     font-weight: 600;
     color: var(--color-dark);
+    margin-bottom: 15px;
     letter-spacing: 1px;
     text-transform: uppercase;
 }
@@ -430,21 +414,22 @@ body {
 
 .btn-learn-more {
     width: fit-content;
-    padding: 12px 30px;
+    padding: 16px 40px;
     background: transparent;
-    border: 1px solid var(--brand-primary);
+    border: 2px solid var(--color-dark);
     border-radius: 30px;
     font-size: 13px;
     font-weight: 600;
     letter-spacing: 1px;
-    color: var(--brand-primary);
+    color: var(--color-dark);
     cursor: pointer;
     transition: all 0.3s ease;
     text-transform: uppercase;
 }
 
 .btn-learn-more:hover {
-    opacity: 0.8;
+    background: var(--color-dark);
+    color: var(--color-white);
 }
 
 .about-right {
@@ -457,13 +442,8 @@ body {
     font-size: 12px;
     font-weight: 600;
     letter-spacing: 1.5px;
-    color: var(--color-white);
-    background-color: var(--brand-primary);
-    padding: 5px 10px;
-    border-radius: 5px;
-    width: fit-content;
+    color: var(--color-dark);
     text-transform: uppercase;
-
 }
 
 .about-description {
@@ -678,12 +658,6 @@ body {
     flex-direction: column;
     gap: 20px;
 }
-.longterm-right .section-label{
-    background-color: var(--color-white);
-    padding: 5px 10px;
-    border-radius: 5px;
-    width: fit-content;
-}
 
 .longterm-description {
     font-size: 16px;
@@ -769,7 +743,7 @@ body {
     }
     
     .content-wrapper {
-        padding: 100px 40px 40px 40px;
+        padding: 130px 40px 40px 40px;
     }
 
     .navbar-content {
@@ -809,15 +783,15 @@ body {
 /* Mobile devices */
 @media (max-width: 768px) {
     .hero-section {
-        height: auto;
+        height: 100vh;
         min-height: 100vh;
     }
 
     .content-wrapper {
         flex-direction: column;
-        justify-content: flex-start;
-        padding: 100px 30px 60px 30px;
-        gap: 40px;
+        justify-content: center;
+        padding: 140px 30px 40px 30px;
+        gap: 0;
     }
 
     .left-content {
@@ -826,28 +800,32 @@ body {
     }
 
     .right-content {
-        align-items: center;
-        width: 100%;
+        display: none; /* Hide discount card on mobile */
     }
 
     .main-heading {
-        font-size: 48px;
+        font-size: 42px;
         text-align: left;
-        margin-bottom: 25px;
+        margin-bottom: 20px;
     }
 
     .quote-text {
         font-size: 10px;
-        margin-bottom: 30px;
+        margin-bottom: 25px;
     }
 
     .buttons {
-        margin-bottom: 40px;
+        margin-bottom: 30px;
+        flex-direction: row;
+        gap: 12px;
+        justify-content: flex-start;
     }
 
     .btn {
         padding: 12px 24px;
         font-size: 12px;
+        width: auto;
+        white-space: nowrap;
     }
 
     .discount-card {
@@ -943,11 +921,11 @@ body {
 /* Small mobile devices */
 @media (max-width: 480px) {
     .main-heading {
-        font-size: 36px;
+        font-size: 34px;
     }
 
     .content-wrapper {
-        padding: 90px 20px 40px 20px;
+        padding: 130px 20px 30px 20px;
     }
 
     .navbar-content {
@@ -968,13 +946,16 @@ body {
     }
 
     .buttons {
-        flex-direction: column;
-        gap: 12px;
+        flex-direction: row;
+        gap: 10px;
         width: 100%;
+        justify-content: flex-start;
     }
 
     .btn {
-        width: 100%;
+        width: auto;
+        padding: 10px 20px;
+        font-size: 11px;
     }
 
     .about-section {
@@ -1088,7 +1069,7 @@ body {
 .service-title {
     font-size: 24px;
     font-weight: 400;
-    color: var(--brand-primary);
+    color: var(--color-dark);
     line-height: 1.3;
     max-width: 80%;
 }
@@ -1106,14 +1087,14 @@ body {
 }
 
 .service-btn {
-    padding: 12px 26px;
+    padding: 14px 28px;
     background: transparent;
-    border: 1.5px solid var(--brand-primary);
+    border: 1.5px solid var(--color-dark);
     border-radius: 25px;
     font-size: 12px;
     font-weight: 600;
     letter-spacing: 1px;
-    color: var(--brand-primary);
+    color: var(--color-dark);
     cursor: pointer;
     transition: all 0.3s ease;
     text-transform: uppercase;
@@ -1121,7 +1102,8 @@ body {
 }
 
 .service-btn:hover {
-    opacity: 0.8;
+    background: var(--color-dark);
+    color: var(--color-white);
 }
 
 /* TRUSTED BY SECTION */
@@ -1362,9 +1344,9 @@ body {
 }
 
 .cta-btn-solid {
-    background: var(--brand-primary);
-    color: var(--color-white);
-    border: 2px solid var(--brand-primary);
+    background: var(--color-white);
+    color: var(--color-dark);
+    border: 2px solid var(--color-white);
 }
 
 .cta-btn-solid:hover {
