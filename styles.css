@@ -783,8 +783,9 @@ body {
 /* Mobile devices */
 @media (max-width: 768px) {
     .hero-section {
-        height: 100vh;
-        min-height: 100vh;
+        /* height: 100vh; */
+        /* min-height: 100vh; */
+        height: 100%;
     }
 
     .content-wrapper {
@@ -804,13 +805,15 @@ body {
     }
 
     .main-heading {
-        font-size: 42px;
+        font-size: 58px;
         text-align: left;
-        margin-bottom: 20px;
+        margin-bottom: 30px;
     }
 
     .quote-text {
-        font-size: 10px;
+        font-size: 16px;
+        font-style: italic;
+        text-transform: lowercase;
         margin-bottom: 25px;
     }
 
@@ -921,7 +924,7 @@ body {
 /* Small mobile devices */
 @media (max-width: 480px) {
     .main-heading {
-        font-size: 34px;
+        font-size: 38px;
     }
 
     .content-wrapper {
