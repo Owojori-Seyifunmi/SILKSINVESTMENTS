@@ -1412,7 +1412,7 @@ body {
 @media (max-width: 768px) {
     .scroll-top {
         bottom: 20px;
-        left: 20px;
+        right : 20px;
         width: 45px;
         height: 45px;
     }
@@ -1873,6 +1873,145 @@ body {
     color: rgba(255, 255, 255, 0.5);
     font-style: italic;
     margin-top: 10px;
+}
+
+
+/* Responsive Legacy Section */
+
+/* Tablet (1024px) */
+@media (max-width: 1024px) {
+    .legacy-section {
+        padding: 80px 0;
+    }
+
+    .legacy-container {
+        padding: 0 40px;
+        gap: 60px;
+    }
+
+    .legacy-heading {
+        font-size: 42px;
+    }
+
+    .legacy-description {
+        font-size: 14px;
+    }
+
+    .legacy-stats-grid {
+        gap: 25px;
+    }
+
+    .legacy-stat-value {
+        font-size: 32px;
+    }
+
+    .legacy-stat-card {
+        padding: 25px 20px;
+    }
+}
+
+/* Mobile (768px) */
+@media (max-width: 768px) {
+    .legacy-section {
+        padding: 60px 0;
+    }
+
+    .legacy-container {
+        grid-template-columns: 1fr;
+        padding: 0 30px;
+        gap: 50px;
+    }
+
+    .legacy-heading {
+        font-size: 36px;
+        letter-spacing: 0.5px;
+    }
+
+    .legacy-description {
+        font-size: 14px;
+        max-width: 100%;
+    }
+
+    .legacy-btn {
+        width: 100%;
+        justify-content: center;
+        padding: 14px 32px;
+    }
+
+    .legacy-stats-grid {
+        gap: 20px;
+    }
+
+    .legacy-stat-card {
+        padding: 25px 20px;
+    }
+
+    .legacy-stat-value {
+        font-size: 28px;
+    }
+
+    .legacy-stat-label {
+        font-size: 11px;
+    }
+
+    .legacy-disclaimer {
+        font-size: 9px;
+        text-align: center;
+    }
+}
+
+/* Small Mobile (480px) */
+@media (max-width: 480px) {
+    .legacy-section {
+        padding: 50px 0;
+    }
+
+    .legacy-container {
+        padding: 0 20px;
+        gap: 40px;
+    }
+
+    .legacy-heading {
+        font-size: 28px;
+    }
+
+    .legacy-description {
+        font-size: 13px;
+    }
+
+    .legacy-btn {
+        padding: 12px 28px;
+        font-size: 12px;
+        gap: 10px;
+    }
+
+    .legacy-btn svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    .legacy-stats-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .legacy-stat-card {
+        padding: 20px 18px;
+    }
+
+    .legacy-stat-value {
+        font-size: 26px;
+        margin-bottom: 10px;
+    }
+
+    .legacy-stat-label {
+        font-size: 11px;
+    }
+
+    .legacy-disclaimer {
+        font-size: 9px;
+        margin-top: 15px;
+    }
 }
 /* HOW IT WORKS SECTION */
 
