@@ -1,7 +1,7 @@
 :root {
     /* Brand Colors */
     --brand-primary: #662c91;
-    
+
     /* UI Colors */
     --color-white: #fff;
     --color-black: #000;
@@ -11,16 +11,16 @@
     --color-bg-gray: #f5f5f5;
     --color-navbar-scroll: #DBDBDB;
     --color-button-hover: #f0f0f0;
-    
+
     /* Gradient Colors */
     --gradient-start: #e8eaf6;
     --gradient-end: #f5f5f5;
-    
+
     /* Overlay Colors */
     --overlay-dark: rgba(0, 0, 0, 0.5);
     --overlay-darker: rgba(0, 0, 0, 0.6);
     --overlay-mobile-menu: rgba(0, 0, 0, 0.95);
-    
+
     /* Shadow Colors */
     --shadow-card: rgba(0, 0, 0, 0.08);
 }
@@ -34,38 +34,6 @@
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
     background: var(--color-bg-gray);
-}
-
-/* HERO SECTION */
-.hero-section {
-    position: relative;
-    height: 120vh;
-    overflow: hidden;
-}
-
-/* Background video */
-.hero-bg-video {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: 0;
-}
-
-/* Dark overlay */
-.hero-section::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: var(--overlay-dark);
-    z-index: 1;
-}
-
-/* Content above video + overlay */
-.content-wrapper {
-    position: relative;
-    z-index: 2;
 }
 
 
@@ -105,8 +73,8 @@ body {
 
 .logo img {
     height: 70px;
-    background-color: var(--color-white);
-    padding: 5px;
+    /* background-color: var(--color-white); */
+    /* padding: 5px; */
     border-radius: 50%;
 }
 
@@ -165,6 +133,58 @@ body {
     transform: translateY(-10.5px) rotate(-45deg);
 }
 
+/* HERO SECTION */
+ .hero-section {
+    position: relative;
+    height: 120vh;
+    overflow: hidden;
+} 
+.hero-section { 
+    position: relative; 
+    height: 120vh; 
+    background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%); 
+    overflow: hidden; 
+}
+.hero-section::before { content: ''; 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    background-image: url('image/background.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    z-index: 0; 
+}
+
+/* Background video */
+ .hero-bg-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+} 
+
+/* Dark overlay */
+.hero-section::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--overlay-dark);
+    z-index: 1;
+}
+
+/* Content above video + overlay */
+.content-wrapper {
+    position: relative;
+    z-index: 2;
+}
+
+
+
 /* HERO CONTENT */
 
 .content-wrapper {
@@ -191,7 +211,7 @@ body {
 
 .main-heading {
     font-size: 63px;
-    font-weight: 350;
+    font-weight: 400;
     line-height: 1.1;
     color: var(--color-white);
     text-align: left;
@@ -229,8 +249,9 @@ body {
     line-height: 1.6;
     color: var(--color-white);
     margin-bottom: 40px;
-    letter-spacing: 0.3px;
-    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: ;
+    text-transform: capitalize;
     opacity: 0;
     animation: slideInUp 0.8s ease-out 0.3s forwards;
 }
@@ -564,7 +585,7 @@ body {
         letter-spacing: 15px;
         padding: 0 50px;
     }
-    
+
     .carousel-container::before,
     .carousel-container::after {
         width: 150px;
@@ -575,13 +596,13 @@ body {
     .carousel-section {
         padding: 40px 0;
     }
-    
+
     .carousel-text {
         font-size: 60px;
         letter-spacing: 10px;
         padding: 0 40px;
     }
-    
+
     .carousel-container::before,
     .carousel-container::after {
         width: 100px;
@@ -592,13 +613,13 @@ body {
     .carousel-section {
         padding: 30px 0;
     }
-    
+
     .carousel-text {
         font-size: 40px;
         letter-spacing: 6px;
         padding: 0 30px;
     }
-    
+
     .carousel-container::before,
     .carousel-container::after {
         width: 60px;
@@ -609,7 +630,7 @@ body {
 
 .longterm-section {
     background: #1a1a1a;
-    background-image: 
+    background-image:
         repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255,255,255,.03) 2px, rgba(255,255,255,.03) 4px),
         repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(255,255,255,.03) 2px, rgba(255,255,255,.03) 4px);
     padding: 100px 0;
@@ -751,7 +772,7 @@ body {
     .main-heading {
         font-size: 56px;
     }
-    
+
     .content-wrapper {
         padding: 130px 40px 40px 40px;
     }
@@ -1172,15 +1193,15 @@ body {
         padding: 0 40px;
         gap: 30px;
     }
-    
+
     .trusted-container {
         padding: 0 40px;
     }
-    
+
     .trusted-logos {
         gap: 60px;
     }
-    
+
     .trusted-name {
         font-size: 24px;
     }
@@ -1190,34 +1211,34 @@ body {
     .services-section {
         padding: 60px 0;
     }
-    
+
     .services-container {
         grid-template-columns: 1fr;
         padding: 0 30px;
     }
-    
+
     .service-card {
         padding: 30px;
     }
-    
+
     .service-title {
         font-size: 22px;
         max-width: 85%;
     }
-    
+
     .trusted-section {
         padding: 60px 0;
     }
-    
+
     .trusted-container {
         padding: 0 30px;
     }
-    
+
     .trusted-logos {
         flex-direction: column;
         gap: 40px;
     }
-    
+
     .trusted-name {
         font-size: 22px;
     }
@@ -1227,41 +1248,41 @@ body {
     .services-section {
         padding: 50px 0;
     }
-    
+
     .services-container {
         padding: 0 20px;
     }
-    
+
     .service-card {
         padding: 25px;
     }
-    
+
     .service-title {
         font-size: 20px;
         max-width: 90%;
     }
-    
+
     .service-btn {
         width: 100%;
         text-align: center;
     }
-    
+
     .trusted-section {
         padding: 50px 0;
     }
-    
+
     .trusted-container {
         padding: 0 20px;
     }
-    
+
     .trusted-label {
         margin-bottom: 40px;
     }
-    
+
     .trusted-logos {
         gap: 30px;
     }
-    
+
     .trusted-name {
         font-size: 20px;
     }
@@ -1422,7 +1443,7 @@ body {
         width: 40px;
         height: 40px;
     }
-    
+
     .scroll-top svg {
         width: 18px;
         height: 18px;
@@ -1435,15 +1456,15 @@ body {
     .cta-heading {
         font-size: 48px;
     }
-    
+
     .cta-container {
         padding: 60px 40px;
     }
-    
+
     .cta-content {
         gap: 60px;
     }
-    
+
     .cta-text {
         font-size: 14px;
     }
@@ -1453,33 +1474,33 @@ body {
     .cta-section {
         min-height: 60vh;
     }
-    
+
     .cta-container {
         padding: 50px 30px;
     }
-    
+
     .cta-content {
         flex-direction: column;
         align-items: flex-start;
         gap: 40px;
     }
-    
+
     .cta-heading {
         font-size: 40px;
         letter-spacing: 0.5px;
         flex: none;
     }
-    
+
     .cta-right {
         width: 100%;
     }
-    
+
     .cta-buttons {
         flex-direction: column;
         width: 100%;
         gap: 15px;
     }
-    
+
     .cta-btn {
         width: 100%;
         text-align: center;
@@ -1491,19 +1512,19 @@ body {
         min-height: 50vh;
         background-attachment: scroll;
     }
-    
+
     .cta-container {
         padding: 40px 20px;
     }
-    
+
     .cta-heading {
         font-size: 32px;
     }
-    
+
     .cta-text {
         font-size: 13px;
     }
-    
+
     .cta-btn {
         padding: 14px 32px;
         font-size: 12px;
@@ -1674,11 +1695,11 @@ body {
         padding: 0 40px;
         gap: 60px;
     }
-    
+
     .testimonials-heading {
         font-size: 48px;
     }
-    
+
     .testimonial-text {
         font-size: 15px;
     }
@@ -1688,21 +1709,21 @@ body {
     .testimonials-section {
         padding: 60px 0;
     }
-    
+
     .testimonials-container {
         grid-template-columns: 1fr;
         padding: 0 30px;
         gap: 50px;
     }
-    
+
     .testimonials-heading {
         font-size: 40px;
     }
-    
+
     .testimonial-card {
         padding: 30px;
     }
-    
+
     .testimonial-text {
         font-size: 14px;
         margin-bottom: 20px;
@@ -1713,24 +1734,24 @@ body {
     .testimonials-section {
         padding: 50px 0;
     }
-    
+
     .testimonials-container {
         padding: 0 20px;
         gap: 40px;
     }
-    
+
     .testimonials-heading {
         font-size: 32px;
     }
-    
+
     .testimonial-card {
         padding: 25px;
     }
-    
+
     .testimonial-text {
         font-size: 13px;
     }
-    
+
     .testimonial-author {
         font-size: 12px;
     }
@@ -1741,7 +1762,7 @@ body {
 
 .legacy-section {
     background: #1a1a1a;
-    background-image: 
+    background-image:
         repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255,255,255,.03) 2px, rgba(255,255,255,.03) 4px),
         repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(255,255,255,.03) 2px, rgba(255,255,255,.03) 4px);
     padding: 100px 0;
@@ -2090,23 +2111,23 @@ body {
     .how-it-works-container {
         padding: 0 40px;
     }
-    
+
     .how-it-works-title {
         font-size: 48px;
     }
-    
+
     .how-it-works-subtitle {
         font-size: 17px;
     }
-    
+
     .steps-container {
         gap: 50px;
     }
-    
+
     .step-number {
         font-size: 120px;
     }
-    
+
     .step-title {
         font-size: 20px;
         margin-top: 70px;
@@ -2117,37 +2138,37 @@ body {
     .how-it-works-section {
         padding: 60px 0;
     }
-    
+
     .how-it-works-container {
         padding: 0 30px;
     }
-    
+
     .how-it-works-header {
         margin-bottom: 60px;
     }
-    
+
     .how-it-works-title {
         font-size: 40px;
     }
-    
+
     .how-it-works-subtitle {
         font-size: 16px;
     }
-    
+
     .steps-container {
         grid-template-columns: 1fr;
         gap: 50px;
     }
-    
+
     .step-number {
         font-size: 100px;
     }
-    
+
     .step-title {
         font-size: 20px;
         margin-top: 60px;
     }
-    
+
     .step-description {
         font-size: 14px;
     }
@@ -2157,36 +2178,36 @@ body {
     .how-it-works-section {
         padding: 50px 0;
     }
-    
+
     .how-it-works-container {
         padding: 0 20px;
     }
-    
+
     .how-it-works-header {
         margin-bottom: 50px;
     }
-    
+
     .how-it-works-title {
         font-size: 32px;
     }
-    
+
     .how-it-works-subtitle {
         font-size: 15px;
     }
-    
+
     .steps-container {
         gap: 40px;
     }
-    
+
     .step-number {
         font-size: 80px;
     }
-    
+
     .step-title {
         font-size: 18px;
         margin-top: 50px;
     }
-    
+
     .step-description {
         font-size: 13px;
     }
@@ -2332,11 +2353,11 @@ body {
     .footer-container {
         padding: 0 40px;
     }
-    
+
     .footer-content {
         gap: 60px;
     }
-    
+
     .footer-links {
         gap: 30px;
     }
@@ -2346,33 +2367,33 @@ body {
     .footer-section {
         padding: 60px 0 30px 0;
     }
-    
+
     .footer-container {
         padding: 0 30px;
     }
-    
+
     .footer-content {
         grid-template-columns: 1fr;
         gap: 50px;
         padding-bottom: 40px;
     }
-    
+
     .footer-links {
         grid-template-columns: 1fr;
         gap: 30px;
     }
-    
+
     .footer-bottom {
         flex-direction: column;
         gap: 20px;
         text-align: center;
     }
-    
+
     .footer-legal {
         flex-direction: column;
         gap: 10px;
     }
-    
+
     .footer-legal .separator {
         display: none;
     }
@@ -2382,35 +2403,35 @@ body {
     .footer-section {
         padding: 50px 0 20px 0;
     }
-    
+
     .footer-container {
         padding: 0 20px;
     }
-    
+
     .footer-content {
         gap: 40px;
         padding-bottom: 30px;
     }
-    
+
     .footer-logo {
         height: 60px;
         width: 60px;
     }
-    
+
     .footer-tagline {
         font-size: 13px;
     }
-    
+
     .footer-heading {
         font-size: 13px;
     }
-    
+
     .footer-list a,
     .footer-contact,
     .footer-address {
         font-size: 13px;
     }
-    
+
     .footer-copyright,
     .footer-legal a {
         font-size: 12px;

@@ -90,8 +90,6 @@ body {
 
 .logo img {
     height: 70px;
-    background-color: var(--color-white);
-    padding: 5px;
     border-radius: 50%;
 }
 
